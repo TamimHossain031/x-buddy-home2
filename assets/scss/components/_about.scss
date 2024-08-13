@@ -1,0 +1,44 @@
+.about{
+    width:100%;
+    min-height:880px;
+    background-color:var(--color-white);
+    position: relative;
+    @include center;
+}
+.xb-ab{
+    position:absolute;
+    
+    &--1{
+        top:48%;
+        left:5%;
+    }
+    &--2{
+        top:5%;
+        left:5%;
+    }
+    &--3{
+        bottom:10%;
+        left:0%
+    }
+    &--4{
+        top:40%;
+        right:10px;
+    }
+    &--5{
+        top:60%;
+        right:30px;
+    }
+}
+.right-content{
+    position: relative;  
+    z-index:2;
+}
+.left-content{    
+    z-index:2;
+}
+.xb-about-quote{
+    position:absolute;
+    width:100%;
+    top:0;
+    left:10%;
+}

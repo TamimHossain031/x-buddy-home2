@@ -1,0 +1,12 @@
+@mixin cta($width:225px,$bg:var(--color-white),$color:var(--color-body)) {  
+  width:$width;
+  height: 50px;
+  background-color: $bg;
+  border-radius: 40px;
+  color:$color;
+  text-transform: uppercase;
+  font-size:14px;
+  font-weight:bold;
+  @include center;
+}
+

@@ -1,0 +1,116 @@
+.footer{
+    width:100%;
+    min-height:767px;
+    padding-top:70px;
+    background-image:url('../img/background-image/Body.png');
+    align-content: center;
+}
+.signUp{
+    width:440px;
+    h3{
+        font-size:36px;
+        color:var(--color-white);
+    }
+}
+.footer_form{
+    width:100%;
+}
+.mail{
+    width:265px;
+    height:50px;
+    position:relative;
+    overflow:hidden;
+
+    input{
+        
+        width:100%;
+        height:100%;
+        color:#fff;
+       
+        font-size:16px;
+        font-weight:medium;
+        background:var(--color-footerbg);
+        border:2px solid var(--color-mailborder);
+        border-radius:5px;
+        
+    }
+    .input_msg{
+        position:absolute;
+        width:100%;
+        height:100%;
+        color:#81A2AD;
+        top:0px;
+        left:0px;
+        font-size:16px;
+        font-weight:medium;
+        pointer-events:none;
+        align-content:center;
+        padding-left:10px;
+        z-index: 2;
+        @include transition(all 0.8s ease-out);
+    }
+    input:valid ~ .input_msg ,
+    input:focus ~ .input_msg    
+    {
+         transform:translateX(50px) scale(1.5);
+         opacity:0;
+    }
+  
+}
+.subscribe{
+    width:143px;
+    height:50px;
+    border-radius:5px;
+    background-color:var(--color-yellow);
+    
+}
+
+.social_section{
+    width:230px;
+    h3{
+        color:var(--color-white);
+        font-size:22px;
+    }
+    a{
+        width:50px;
+        height:50px;
+        background-color:var(--color-footerbg);
+        @include center;
+        border:1px solid var(--color-mailborder);
+        @include border-radius(5px);
+        color:var(--color-white);
+        &:hover{
+            background-color:var(--color-yellow);
+            color: var(--color-footerbg);
+        }
+    }
+   
+
+}
+.footer_main{
+    background-color:var(--color-footerbg);
+    min-height:410px;
+    margin-top:70px;
+    align-content:center;
+    border:1px solid var(--color-mailborder);
+    @include border-radius(15px);
+}
+.ft-data{
+    h5{
+        color:var(--color-gray);
+        text-transform: none;
+    }
+    h4{
+        color:var(--color-white);
+        margin-top: 15px;
+    }
+}
+.ft-col-3,
+.ft-col-4{
+    a{
+        color:var(--color-white);
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

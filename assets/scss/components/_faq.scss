@@ -1,0 +1,154 @@
+.faq {
+  width: 100%;
+  margin-top: 130px;
+  min-height: 1005px;
+
+  &__blockchain {
+    margin:0 auto;
+    @include respond(lg) {
+      margin: 0 50px;
+    }
+    @include respond(md) {
+      margin: 0;
+    }
+    .accordion_box {
+      list-style: none;
+      .block {
+        background: var(--color-white);
+        box-shadow: 0 8px 15px 0 rgba(220, 220, 220, 0.25);
+        margin: 20px 0;
+        border-radius: 10px;
+        @include transition(0.3s);
+        .acc-btn {
+          padding-bottom: 17px;
+          font-weight: 600;
+          font-size: 22px;
+          color: var(--color-heading);
+          position: relative;
+          padding: 37px 20px;
+          cursor: pointer;
+          padding-top: 37px;
+          padding-left: 48px;
+          border: 1px solid var(--color-gray);
+          @include border-radius(7px);
+          @include transition(0.3s);
+          @include respond(xs) {
+            padding-left: 20px;
+            padding-right: 50px;
+            font-size: 18px;
+          }
+        }
+        .acc_body {
+          position: relative;
+          overflow: hidden;
+          display: none;
+          padding: 20px 75px;
+
+          &.current {
+            display: block;
+          }
+        }
+
+        @include respond(xs) {
+          padding-right: 30px;
+          padding-left: 30px;
+        }
+      }
+      .qus {
+        font-weight: 600;
+        font-size: 22px;
+        color: var(--color-darkgray);
+        padding-right: 13px;
+      }
+    }
+  }
+
+  .acc-btn {
+    &.active {
+      .arrow {
+        &::after {
+          opacity: 1;
+        }
+        span::before {
+          opacity: 0;
+        }
+        span::after {
+          content: "-";
+        }
+      }
+    }
+    span {
+      margin: 0 !important;
+    }
+  }
+  .arrow {
+    position: absolute;
+    top: 48px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: var(--color-bg);
+    @include transform(translateY(-50%));
+    @include respond(xs) {
+      right: 10px;
+    }
+    span {
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: "+";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 400;
+        @include transform(translate(-50%, -50%));
+        font-size: 13px;
+        color: var(--color-primary);
+      }
+      &::after {
+        content: "+";
+        opacity: 0;
+        z-index: 1;
+        top: 48%;
+      }
+    }
+  }
+
+  .accordion.block.active-block {
+    background: var(--color-bg);
+    .content {
+      border: 1px solid red;
+      height: 300px;
+    }
+    .qus {
+      font-weight: 600;
+      font-size: 22px;
+    }
+    .acc-btn {
+      border: none;
+      padding-bottom: 22px;
+      .arrow {
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        background: var(--color-white);
+        &::after {
+          opacity: 1;
+        }
+        span::before {
+          opacity: 0;
+        }
+        span::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.faq_wrap {
+  min-height: 1005px;
+  align-content: center;
+  @include border-radius(15px);
+}

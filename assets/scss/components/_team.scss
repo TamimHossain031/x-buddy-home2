@@ -1,0 +1,50 @@
+.team {
+  background-color: #fff;
+  min-height:735px;
+  align-content: center;
+}
+.team_wrap {
+  width: 100%;
+}
+.member {
+  max-width: 300px;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+.team-top {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  z-index: 2;
+  img {
+    width: 300px;
+    height:300px;
+    object-fit: contain;
+    object-position:center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  a {
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    @include transform(translateX(-50%));
+    @include center;
+    @include border-radius(50%);
+    z-index: 1;
+    color: var(--color-heading);
+  }
+}
+.team-bottom {
+  margin-top:40px;
+  p {
+    padding: 0;
+  }
+}

@@ -1,0 +1,22 @@
+@import "./reset";
+@import "./fonts";
+@import "./typography";
+@import "./spacing";
+@import "../components/cta";
+.body_wrap{
+    width:100%;
+    position:relative;
+}
+
+.xb-container{
+    max-width:1292px;
+    margin:0 auto;
+}
+
+.header-container{
+    max-width:1724px;   
+}
+.text-orange{
+    color:var(--color-orange);
+}
+

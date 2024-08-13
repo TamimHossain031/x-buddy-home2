@@ -1,0 +1,40 @@
+.contactUs{
+    position: relative;
+    min-height:720px;
+    margin-top:130px;
+    background-color:var(--color-white);
+    @include center;
+}
+.xb-cu{
+    position: absolute;    
+    &--1{
+        top:10%;
+        left:1%;
+    }
+    &--2{
+        top:80%;
+        left:0;
+    }
+    &--3{
+        top:15%;
+        right:1%;
+    }
+    &--4{
+        top:70%;
+        right:1%;
+    }
+}
+
+.contact_wrap{    
+    align-content:center;
+    z-index:2;
+}
+.contact_left{
+    align-content:center;
+}
+.contact_right{
+    justify-content: center;
+    img{
+        width:100%;
+    }
+}
